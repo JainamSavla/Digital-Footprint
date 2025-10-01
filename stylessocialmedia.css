@@ -1,0 +1,239 @@
+/* Social Media Feed Blocker Styles */
+
+/* Global feed blocker class */
+.feed-blocker-hidden {
+  display: none !important;
+}
+
+/* ===== LINKEDIN STYLES ===== */
+
+/* LinkedIn Home Feed Blocking */
+body.feed-blocker-linkedin-home .feed-shared-update-v2,
+body.feed-blocker-linkedin-home .occludable-update,
+body.feed-blocker-linkedin-home .feed-shared-news-article,
+body.feed-blocker-linkedin-home .feed-shared-article,
+body.feed-blocker-linkedin-home .feed-shared-video,
+body.feed-blocker-linkedin-home .feed-shared-celebration-update,
+body.feed-blocker-linkedin-home .feed-shared-job-update,
+body.feed-blocker-linkedin-home .feed-shared-company-update,
+body.feed-blocker-linkedin-home
+  [data-urn*="urn:li:activity"]:not(.share-creation-state) {
+  display: none !important;
+}
+
+/* LinkedIn News Feed Blocking */
+body.feed-blocker-linkedin-news .news-module,
+body.feed-blocker-linkedin-news .ad-banner-container,
+body.feed-blocker-linkedin-news [data-test-id="news-module"],
+body.feed-blocker-linkedin-news [data-test-id="ad-banner"],
+body.feed-blocker-linkedin-news .news-outlet,
+body.feed-blocker-linkedin-news .linkedin-news,
+body.feed-blocker-linkedin-news [aria-label*="LinkedIn News"],
+body.feed-blocker-linkedin-news [aria-label*="Today's news and views"] {
+  display: none !important;
+}
+
+/* LinkedIn - Always preserve essential elements */
+.share-creation-state,
+.share-box-feed-entry,
+.artdeco-card.share-creation-state,
+.share-box,
+[data-test-id="share-box"],
+.global-nav,
+.scaffold-layout__header,
+.identity-outlet,
+.feed-identity-module,
+.profile-card,
+[data-test-id*="profile"],
+[data-test-id*="identity"],
+[class*="identity"]:not([class*="news"]),
+[class*="profile-card"],
+[class*="member-info"] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* ===== YOUTUBE STYLES ===== */
+
+/* YouTube Shorts Blocking */
+body.feed-blocker-youtube-shorts ytd-reel-shelf-renderer,
+body.feed-blocker-youtube-shorts ytd-rich-shelf-renderer[is-shorts],
+body.feed-blocker-youtube-shorts [aria-label*="Shorts"],
+body.feed-blocker-youtube-shorts a[href*="/shorts/"],
+body.feed-blocker-youtube-shorts #shorts-container,
+body.feed-blocker-youtube-shorts .ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* YouTube Home Feed Blocking */
+body.feed-blocker-youtube-home ytd-rich-item-renderer,
+body.feed-blocker-youtube-home
+  .ytd-browse[page-subtype="home"]
+  #contents
+  ytd-rich-item-renderer {
+  display: none !important;
+}
+
+/* YouTube Sidebar Blocking */
+body.feed-blocker-youtube-sidebar #related,
+body.feed-blocker-youtube-sidebar .watch-sidebar,
+body.feed-blocker-youtube-sidebar ytd-watch-next-secondary-results-renderer,
+body.feed-blocker-youtube-sidebar #secondary {
+  display: none !important;
+}
+
+/* YouTube End Screen Blocking */
+body.feed-blocker-youtube-endscreen .ytp-endscreen-content,
+body.feed-blocker-youtube-endscreen .ytp-ce-element,
+body.feed-blocker-youtube-endscreen .ytp-cards-button,
+body.feed-blocker-youtube-endscreen ytd-compact-autoplay-renderer {
+  display: none !important;
+}
+
+/* YouTube Comments Blocking */
+body.feed-blocker-youtube-comments #comments,
+body.feed-blocker-youtube-comments ytd-comments,
+body.feed-blocker-youtube-comments #comment-teaser,
+body.feed-blocker-youtube-comments ytd-comment-thread-renderer {
+  display: none !important;
+}
+
+/* ===== TWITTER/X STYLES ===== */
+
+/* Twitter For You Timeline Blocking */
+body.feed-blocker-twitter-foryou
+  [data-testid="primaryColumn"]
+  section[role="region"]:not(:has([data-testid="compose"])),
+body.feed-blocker-twitter-foryou
+  [aria-label="Timeline: Your Home Timeline"]
+  article[data-testid="tweet"] {
+  display: none !important;
+}
+
+/* Twitter Trending Blocking */
+body.feed-blocker-twitter-trending [data-testid="trend"],
+body.feed-blocker-twitter-trending [aria-label*="Trending"],
+body.feed-blocker-twitter-trending
+  [data-testid="sidebarColumn"]
+  section:has([data-testid="trend"]) {
+  display: none !important;
+}
+
+/* Twitter Suggested Users Blocking */
+body.feed-blocker-twitter-suggested [data-testid="UserCell"],
+body.feed-blocker-twitter-suggested
+  [data-testid="sidebarColumn"]
+  section:has([data-testid="UserCell"]),
+body.feed-blocker-twitter-suggested [aria-label*="Who to follow"] {
+  display: none !important;
+}
+
+/* Twitter Sidebar Topics Blocking */
+body.feed-blocker-twitter-sidebar
+  [data-testid="sidebarColumn"]
+  > div
+  > div
+  > div:not(:first-child):not(:has([data-testid="searchbox"])) {
+  display: none !important;
+}
+
+/* Twitter Media Blocking */
+body.feed-blocker-twitter-media
+  [data-testid="tweet"]
+  [data-testid="tweetPhoto"],
+body.feed-blocker-twitter-media
+  [data-testid="tweet"]
+  [data-testid="videoPlayer"],
+body.feed-blocker-twitter-media
+  [data-testid="tweet"]
+  [data-testid="card.wrapper"] {
+  display: none !important;
+}
+
+/* ===== REDDIT STYLES ===== */
+
+/* Reddit Feed Blocking */
+body.feed-blocker-reddit-feed .Post,
+body.feed-blocker-reddit-feed [data-testid="post-container"],
+body.feed-blocker-reddit-feed .thing,
+body.feed-blocker-reddit-feed .entry,
+body.feed-blocker-reddit-feed shreddit-post,
+body.feed-blocker-reddit-feed article[data-testid="post-container"],
+body.feed-blocker-reddit-feed .scrollerItem {
+  display: none !important;
+}
+
+/* Reddit Comments Blocking */
+body.feed-blocker-reddit-comments .Comment,
+body.feed-blocker-reddit-comments .comment,
+body.feed-blocker-reddit-comments .commentarea,
+body.feed-blocker-reddit-comments [data-testid="comment"],
+body.feed-blocker-reddit-comments shreddit-comment,
+body.feed-blocker-reddit-comments .entry .usertext,
+body.feed-blocker-reddit-comments #siteTable .comment {
+  display: none !important;
+}
+
+/* ===== INSTAGRAM STYLES ===== */
+
+/* Instagram Reels Blocking */
+body.feed-blocker-instagram-reels a[href*="/reels/"],
+body.feed-blocker-instagram-reels [aria-label*="Reels"],
+body.feed-blocker-instagram-reels section[data-testid="xdt-reels-viewer"],
+body.feed-blocker-instagram-reels .reels-tab {
+  display: none !important;
+}
+
+/* Instagram Explore Blocking */
+body.feed-blocker-instagram-explore main[role="main"] article,
+body.feed-blocker-instagram-explore section article {
+  display: none !important;
+}
+
+/* Instagram Suggested Posts Blocking */
+body.feed-blocker-instagram-suggested
+  article:has([data-testid="suggested-post-label"]),
+body.feed-blocker-instagram-suggested .suggested-post {
+  display: none !important;
+}
+
+/* Instagram Suggested Reels Blocking */
+body.feed-blocker-instagram-suggested-reels .suggested-reels {
+  display: none !important;
+}
+
+/* Instagram Follow Counts Blocking */
+body.feed-blocker-instagram-counts a[href*="/followers/"],
+body.feed-blocker-instagram-counts a[href*="/following/"] {
+  visibility: hidden !important;
+}
+
+/* ===== GENERAL LAYOUT FIXES ===== */
+
+/* Ensure main layouts stay intact when content is hidden */
+.scaffold-layout__main,
+#primary,
+[data-testid="primaryColumn"],
+main[role="main"] {
+  min-height: auto !important;
+}
+
+/* Clean up empty spaces */
+:empty {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Smooth transitions for blocked content */
+.feed-blocker-hidden {
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Hide blocked content with fade effect when JS adds the class */
+.feed-blocker-fade-out {
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
